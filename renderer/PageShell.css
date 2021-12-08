@@ -1,10 +1,20 @@
-@import './css/index.css'
+@import './css/index.css';
 
-/*
 body {
   margin: 0;
-  font-family: sans-serif;
+  background-color: black;
 }
+
+#slide {
+  background-color: white;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*
 * {
   box-sizing: border-box;
 }
