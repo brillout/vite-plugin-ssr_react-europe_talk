@@ -30,5 +30,7 @@
     "vite": "^2.3.6",
     "vite-plugin-mdx": "^3.5.6",
     "vite-plugin-ssr": "^0.3.35"
-  }
+  },
+  "name": "slides",
+  "version": "0.0.0"
 }
