@@ -3,17 +3,12 @@ import logo from './logo.svg'
 
 export { Logo }
 
-function Logo() {
+function Logo({size, style}: {size: number, style: React.CSSProperties}) {
   return (
     <div
-      style={{
-        marginTop: 20,
-        marginBottom: 10,
-      }}
+      style={style}
     >
-      <a href="/">
-        <img src={logo} height={64} width={64} alt="logo" />
-      </a>
+      <img src={logo} height={size} width={size} />
     </div>
   )
 }

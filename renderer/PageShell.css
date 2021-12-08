@@ -1,16 +1,21 @@
-@import './css/index.css';
+@import "./css/index.css";
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: #334;
 }
 
-#slide {
+#slide-wrapper {
   background-color: white;
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
+  margin: auto;
+}
+#slide-content {
+  width: 800px;
   margin: auto;
 }
 

@@ -2,7 +2,7 @@ const express = require('express')
 const { createPageRenderer } = require('vite-plugin-ssr')
 const vite = require('vite')
 
-const root = `${__dirname}/../../docs`
+const root = __dirname
 const isProduction = false
 
 startServer()

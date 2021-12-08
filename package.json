@@ -7,7 +7,7 @@
     "build:clean": "rm -rf dist/",
     "// We need to build `vite-plugin-ssr` because Yarn symlinks `vite-plugin-ssr`": "",
     "build:vite": "vite build && vite build --ssr",
-    "build:prerender": "vite-plugin-ssr prerender --noExtraDir --root ../../docs/",
+    "build:prerender": "vite-plugin-ssr prerender --noExtraDir",
     "// Static serve for production": "",
     "prod:serve": "serve ./dist/client/ --listen 3000"
   },

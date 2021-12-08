@@ -21,5 +21,5 @@ function PageShell({
 }
 
 function Layout({ children }: { children: React.ReactNode }) {
-  return <div id="slide">{children}</div>;
+  return <div id="slide-wrapper"><div id="slide-content">{children}</div></div>;
 }
