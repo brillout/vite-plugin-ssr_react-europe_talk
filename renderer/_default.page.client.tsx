@@ -1,5 +1,5 @@
 import './PageShell.css'
-import '../components/Logo/logo.svg'
+import './components/Logo/logo.svg'
 
 window.onkeydown  = ({code, shiftKey}) => {
   //console.log(code)

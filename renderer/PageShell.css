@@ -19,6 +19,10 @@ body {
   margin: auto;
 }
 
+h1 {
+  font-size: 4em;
+}
+
 /*
 * {
   box-sizing: border-box;
