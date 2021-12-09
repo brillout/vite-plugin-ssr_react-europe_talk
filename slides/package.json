@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "node ./devServer",
-    "prod": "yarn build && yarn prod:serve",
+    "prod": "yarn build && yarn serve",
     "// Build for production": "",
     "build": "yarn build:clean && yarn build:vite && yarn build:prerender",
     "build:clean": "rm -rf dist/",
@@ -9,7 +9,7 @@
     "build:vite": "vite build && vite build --ssr",
     "build:prerender": "vite-plugin-ssr prerender --noExtraDir",
     "// Static serve for production": "",
-    "prod:serve": "serve ./dist/client/ --listen 3000"
+    "serve": "serve ./dist/client/ --listen 5000"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

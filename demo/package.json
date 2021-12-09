@@ -3,7 +3,7 @@
     "dev": "node ./server",
     "// Build": "",
     "prod": "npm run build && npm run serve",
-    "build": "npm run build:vite && npm run build:prerender && npm run server:prod",
+    "build": "npm run build:vite && npm run build:prerender",
     "build:vite": "vite build && vite build --ssr",
     "build:prerender": "vite-plugin-ssr prerender",
     "serve": "serve ./dist/client/ --listen 3000"
