@@ -27,7 +27,7 @@ async function startServer() {
     res.status(statusCode).type(contentType).send(body)
   })
 
-  const port = 3000
+  const port = 5000
   app.listen(port)
   console.log(`Server running at http://localhost:${port}`)
 }

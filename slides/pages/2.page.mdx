@@ -1,1 +1,23 @@
-# What is SSR?
+One `pages/*.page.jsx` file per page, like Next.js.
+
+```js
+// /pages/index.page.jsx
+// URL: /
+
+export { Page }
+
+function Page() {
+   return <>Hello</>
+}
+```
+
+```js
+// /pages/about.page.jsx
+// URL: /about
+
+export { Page }
+
+function Page() {
+   return <>A second page</>
+}
+```
