@@ -1,1 +1,26 @@
-# Pre-rendering (aka SSG)
+export const style = {
+  fontSize: '1.1rem',
+}
+
+```js
+// /renderer/_default.page.server.jsx
+// Environment: Node.js
+
+import ReactDOMServer from "react-dom/server"
+import React from "react"
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr"
+
+export async function render({ Page }) {
+  const viewHtml = ReactDOMServer.renderToString(<Page />)
+  const title = "Vite SSR"
+  return escapeInject`<!DOCTYPE html>
+    <html>
+      <head>
+        <title>${title}</title>
+      </head>
+      <body>
+        <div id="page-view">${dangerouslySkipEscape(viewHtml)}</div>
+      </body>
+    </html>`
+}
+```

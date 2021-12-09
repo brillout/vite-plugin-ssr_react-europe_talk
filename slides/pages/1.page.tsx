@@ -10,7 +10,7 @@ function Page() {
         <Logo size={120} style={{marginRight: 30}} />
     {' '}
         <code style={{
-          fontSize: '3em',
+          fontSize: '3rem',
             padding: '10px 17px',
             fontWeight: 500,
             borderRadius: 7,

@@ -1,1 +1,20 @@
-# Questions?
+```js
+// server.js
+// Environment: Node.js
+
+const express = require('express')
+const { createPageRenderer } = require('vite-plugin-ssr')
+
+const app = express()
+
+const renderPage = createPageRenderer()
+app.get('*', async (req, res, next) => {
+  const { url } = req
+  const { httpResponse } = await renderPage({ url })
+  if (!httpResponse) return next()
+  const { body, statusCode, contentType } = httpResponse
+  res.status(statusCode).type(contentType).send(body)
+})
+
+// That's it!
+app.listen(80)

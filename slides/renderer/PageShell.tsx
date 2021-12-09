@@ -1,25 +1,26 @@
-import React from "react";
-import { PageContextProvider } from "./usePageContext";
-import type { PageContext } from "./types";
+import React from 'react'
+import { PageContextProvider } from './usePageContext'
+import type { PageContext } from './types'
 
-export { PageShell };
+export { PageShell }
 
-function PageShell({
-  children,
-  pageContext,
-}: {
-  children: React.ReactNode;
-  pageContext: PageContext;
-}) {
+function PageShell({ children, pageContext }: { children: React.ReactNode; pageContext: PageContext }) {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <Layout>{children}</Layout>
+        <Layout pageContext={pageContext}>{children}</Layout>
       </PageContextProvider>
     </React.StrictMode>
-  );
+  )
 }
 
-function Layout({ children }: { children: React.ReactNode }) {
-  return <div id="slide-wrapper"><div id="slide-content">{children}</div></div>;
+function Layout({ children, pageContext }: { children: React.ReactNode; pageContext: PageContext }) {
+  const { style } = pageContext.pageExports
+  return (
+    <div id="slide-wrapper">
+      <div id="slide-content" style={style}>
+        {children}
+      </div>
+    </div>
+  )
 }

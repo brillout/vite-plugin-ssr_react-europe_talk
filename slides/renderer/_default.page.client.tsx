@@ -1,5 +1,6 @@
 import './PageShell.css'
-import './components/Logo/logo.svg'
+import './components/Logo/vite-plugin-ssr.svg'
+import './components/Logo/telefunc.svg'
 
 window.onkeydown  = ({code, shiftKey}) => {
   //console.log(code)
