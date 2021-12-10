@@ -1,11 +1,13 @@
-import vikeBanner from '../renderer/components/Logo/vike-banner.jpg'
+import { Logo } from "../renderer/components/Logo";
 import { Center } from "../renderer/components/Center";
 
-<Center>
-<img src={vikeBanner} height="210"/>
-</Center>
-<Center>
-  <div style={{fontSize: '2em'}}>
-  🚧
-  </div>
-</Center>
+export const style = {
+  fontSize: '1.5em',
+}
+
+<div>
+  <Logo size={44}/> vite-plugin-ssr.com
+</div>
+<div>
+  <Logo size={44} logo="telefunc"/> telefunc.com 🚧
+</div>
